@@ -1,0 +1,42 @@
+.landing-container {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'main sidebar sidebar'
+    'footer footer footer';
+  grid-template-rows: 1fr 3fr 1fr;
+}
+
+.header {
+  grid-area: header;
+  background: #333;
+  color: white;
+  text-align: center;
+}
+
+.main {
+  grid-area: main;
+  background: lightblue;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: lightgray;
+}
+
+.footer {
+  grid-area: footer;
+  background: #333;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    grid-template-areas:
+      'header'
+      'main'
+      'sidebar'
+      'footer';
+  }
+}
